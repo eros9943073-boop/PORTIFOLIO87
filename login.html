@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Área Administrativa</title>
+</head>
+<body>
+
+  <header>
+    <a href="index.html">← Voltar para o portfólio</a>
+  </header>
+
+  <main>
+    <h1>Acesso Restrito</h1>
+    <p>Entre com seu usuário e senha para gerenciar o portfólio.</p>
+
+    <form id="form-login">
+      <div>
+        <label for="usuario">Usuário:</label><br>
+        <input type="text" id="usuario" name="usuario" required>
+      </div>
+
+      <br>
+
+      <div>
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha" required>
+      </div>
+
+      <br>
+
+      <button type="submit">Entrar</button>
+    </form>
+
+    <p id="mensagem-erro"></p>
+  </main>
+
+  <!-- 1. Importa a biblioteca oficial do Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- 2. Lógica de conexão e autenticação -->
+  <script>
+    // =====================================================================
+    // CONFIGURAÇÃO DO SUPABASE
+    // Pegue esses dois dados no painel do Supabase em:
+    // Project Settings (ícone de engrenagem) -> API
+    // =====================================================================
+    const SUPABASE_URL = 'https://yatsmsvttvldmupcatjd.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_wfdIRdpeCGp0bRpjSFr8mw_f1EwGQZz';
+
+    // Inicia a conexão com o seu banco
+    const bancoDados = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    const formulario = document.getElementById('form-login');
+    const mensagemErro = document.getElementById('mensagem-erro');
+
+    formulario.addEventListener('submit', async function(evento) {
+      evento.preventDefault();
+
+      const usuarioDigitado = document.getElementById('usuario').value.trim();
+      const senhaDigitada = document.getElementById('senha').value;
+
+      mensagemErro.textContent = "Consultando banco de dados...";
+
+      // 3. Faz a busca na tabela 'Usuarios'
+      const { data, error } = await bancoDados
+        .from('usuarios')          // Nome exato da sua tabela
+        .select('*')               // Traz todas as colunas do registro encontrado
+        .eq('usuario', usuarioDigitado) // Onde a coluna 'usuario' seja igual ao digitado
+        .eq('senha', senhaDigitada)     // E a coluna 'senha' seja igual à digitada
+        .maybeSingle();            // Retorna 1 objeto se achar, ou null se não achar
+
+      // 4. Verifica se houve falha de conexão ou configuração
+      if (error) {
+        console.error("Erro técnico do Supabase:", error);
+        mensagemErro.textContent = "Erro ao conectar com o banco. Verifique o console (F12).";
+        return;
+      }
+
+      // 5. Se 'data' existir, significa que usuário e senha bateram no banco!
+      if (data) {
+        localStorage.setItem('usuarioLogado', 'true');
+        localStorage.setItem('nomeUsuario', data.usuario);
+        
+        window.location.href = "dashboard.html";
+      } else {
+        mensagemErro.textContent = "Usuário ou senha incorretos.";
+      }
+    });
+  </script>
+
+</body>
+</html>

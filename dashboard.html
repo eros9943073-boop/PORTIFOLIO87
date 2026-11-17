@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Meu Portfólio</title>
+  
+  <!-- Importando o CSS específico da dashboard -->
+  <link rel="stylesheet" href="dashboard.css">
+  
+  <!-- Biblioteca de ícones Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Biblioteca oficial do Supabase para conectar ao banco -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <!-- Cabeçalho padrão do seu site -->
+  <header class="cabecalho">
+    <nav class="menu">
+      <a href="index.html" class="logo">Eros.dev</a>
+      
+      <ul class="links-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="quemsoueu.html">Quem sou eu</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+      </ul>
+
+      <!-- Como estamos na área logada, trocamos o cadeado por um botão de sair -->
+      <a href="index.html" class="btn-sair" aria-label="Sair do painel administrativo" title="Sair">
+        <i data-lucide="log-out"></i>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Conteúdo principal da Dashboard -->
+  <main class="container">
+    <section class="card-formulario">
+      <div class="titulo-secao">
+        <i data-lucide="folder-plus"></i>
+        <h1>Adicionar Novo Projeto</h1>
+      </div>
+      <p class="subtitulo">Preencha os dados abaixo para publicar um trabalho no seu portfólio.</p>
+
+      <!-- Formulário de cadastro -->
+      <form id="form-projeto">
+        <div class="campo">
+          <label for="titulo">Título do Projeto *</label>
+          <input type="text" id="titulo" placeholder="Ex: Sistema de Login com Supabase" required>
+        </div>
+
+        <div class="campo">
+          <label for="descricao">Descrição *</label>
+          <textarea id="descricao" rows="4" placeholder="Explique o que o projeto faz e quais tecnologias você usou..." required></textarea>
+        </div>
+
+        <div class="campo">
+          <label for="link">Link do Projeto (opcional)</label>
+          <input type="url" id="link" placeholder="https://github.com/seu-usuario/projeto">
+        </div>
+
+        <button type="submit" id="btn-salvar" class="btn-primario">
+          <i data-lucide="save"></i>
+          <span>Salvar no Portfólio</span>
+        </button>
+
+        <!-- Área para mostrar mensagens de sucesso ou erro -->
+        <p id="mensagem-status" class="status-oculto"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Importando o nosso JavaScript no final para garantir que o HTML já carregou -->
+  <script src="dashboard.js"></script>
+</body>
+</html>

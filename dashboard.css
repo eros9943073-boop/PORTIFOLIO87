@@ -1,0 +1,178 @@
+/* Reset básico para tirar margens padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  color: #1e293b;
+}
+
+/* Estilização do Menu */
+.cabecalho {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1rem 2rem;
+}
+
+.menu {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.links-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.links-menu a {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.links-menu a:hover {
+  color: #2563eb;
+}
+
+.btn-sair {
+  color: #ef4444;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.btn-sair:hover {
+  transform: scale(1.1);
+}
+
+/* Container e Cartão do Formulário */
+.container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.card-formulario {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.titulo-secao {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.titulo-secao svg {
+  color: #2563eb;
+}
+
+.subtitulo {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+/* Campos do Formulário */
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.campo label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #334155;
+}
+
+.campo input,
+.campo textarea {
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* Botão de Salvar */
+.btn-primario {
+  width: 100%;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 0.85rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.btn-primario:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-primario:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Mensagens de Feedback */
+.status-oculto {
+  display: none;
+}
+
+.status-sucesso {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #dcfce7;
+  color: #166534;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.status-erro {
+  display: block;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.9rem;
+}
