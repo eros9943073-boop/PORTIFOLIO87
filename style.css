@@ -1,0 +1,979 @@
+
+/* CORES DO MENU */
+:root {
+    --menu-verde: #183e32;
+    --menu-dourado: #c6a45c;
+    --menu-branco: #ffffff;
+    --menu-texto: #26352e;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    width: 100%;
+    background-color: var(--menu-branco);
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ORGANIZAÇÃO DO MENU */
+.menu {
+    max-width: 1200px;
+    min-height: 85px;
+    margin: auto;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+/* LOGO */
+.logo {
+    color: var(--menu-verde);
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--menu-dourado);
+}
+
+/* LINKS */
+.links-menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* APARÊNCIA DOS LINKS */
+.links-menu a {
+    color: var(--menu-texto);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+/* EFEITO DO MOUSE */
+.links-menu a:hover {
+    color: var(--menu-dourado);
+}
+
+/* ACESSIBILIDADE */
+.menu a:focus-visible {
+    outline: 3px solid var(--menu-dourado);
+    outline-offset: 4px;
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    .menu {
+        min-height: 75px;
+        padding: 12px 15px;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .links-menu {
+        gap: 12px;
+    }
+
+    .links-menu a {
+        font-size: 12px;
+    }
+}
+
+
+/* =====================================
+   HERO - PÁGINA INICIAL
+===================================== */
+
+.hero {
+    width: 100%;
+    min-height: 620px;
+    padding: 80px 25px;
+
+    display: flex;
+    align-items: center;
+
+    background: #ffffff;
+}
+
+/* ORGANIZAÇÃO DA FOTO E DO TEXTO */
+
+.hero-container {
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+
+    align-items: center;
+    gap: 75px;
+}
+
+/* FOTO */
+
+.hero-foto {
+    width: 100%;
+    max-width: 380px;
+    height: 450px;
+    margin: auto;
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    border: 3px solid #c6a45c;
+    box-shadow: 15px 15px 0 #183e32;
+}
+
+.hero-foto img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+}
+
+/* CONTEÚDO */
+
+.hero-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* TEXTO DE DESTAQUE */
+
+.hero-destaque {
+    color: #c6a45c;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+/* TÍTULO PRINCIPAL */
+
+.hero-conteudo h1 {
+    color: #183e32;
+
+    font-size: clamp(45px, 6vw, 70px);
+    font-weight: 800;
+
+    margin: 0;
+    line-height: 1.1;
+}
+
+.hero-conteudo h1 span {
+    color: #c6a45c;
+}
+
+/* SUBTÍTULO */
+
+.hero-conteudo h2 {
+    color: #183e32;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    margin: 18px 0;
+}
+
+/* PARÁGRAFO */
+
+.hero-conteudo p {
+    color: #626b66;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    max-width: 550px;
+    margin-bottom: 25px;
+}
+
+/* HABILIDADES */
+
+.hero-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.hero-habilidades span {
+    background: #f3f5f2;
+    color: #183e32;
+
+    border: 1px solid #e2e9e3;
+    border-radius: 30px;
+
+    padding: 10px 15px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* BOTÃO */
+
+.hero-botao {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px 25px;
+
+    background: #183e32;
+    color: #ffffff;
+
+    border-radius: 8px;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.hero-botao:hover {
+    background: #c6a45c;
+    color: #183e32;
+
+    transform: translateY(-3px);
+}
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .hero-foto {
+        max-width: 300px;
+        height: 350px;
+    }
+
+    .hero-conteudo {
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-conteudo h1 {
+        font-size: 48px;
+    }
+
+    .hero-conteudo h2 {
+        font-size: 19px;
+    }
+
+    .hero-conteudo p {
+        font-size: 15px;
+    }
+
+    .hero-habilidades {
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================
+   PÁGINA DE PORTFÓLIO
+========================================= */
+
+.portfolio-page {
+    background: #ffffff;
+    color: #26352e;
+    padding: 60px 25px;
+}
+
+/* APRESENTAÇÃO */
+
+.portfolio-intro {
+    max-width: 850px;
+    margin: 0 auto 85px;
+    text-align: center;
+}
+
+.portfolio-kicker,
+.skill-label,
+.portfolio-end > span {
+    color: #c6a45c;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.portfolio-intro h1 {
+    color: #183e32;
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.portfolio-intro h1 span {
+    color: #c6a45c;
+}
+
+.portfolio-intro p {
+    color: #68736d;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* SEÇÕES DAS HABILIDADES */
+
+.skill-section {
+    max-width: 1100px;
+    margin: 0 auto 35px;
+    padding: 45px;
+
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 30px;
+    align-items: start;
+
+    background: #f8faf8;
+    border: 1px solid #e7eee8;
+    border-radius: 15px;
+
+    transition: 0.3s ease;
+}
+
+.skill-section:hover {
+    border-color: #c6a45c;
+    transform: translateY(-3px);
+}
+
+/* NÚMERO DE CADA HABILIDADE */
+
+.skill-number {
+    color: #c6a45c;
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* CONTEÚDO */
+
+.skill-content h2 {
+    color: #183e32;
+    font-size: 28px;
+    margin: 12px 0 20px;
+}
+
+.skill-content p {
+    color: #626e66;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* ETIQUETAS */
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.skill-tags span {
+    background: #183e32;
+    color: #ffffff;
+    padding: 9px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* SEÇÃO FINAL */
+
+.portfolio-end {
+    max-width: 1100px;
+    margin: 80px auto 10px;
+    padding: 55px 35px;
+
+    background: #183e32;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.portfolio-end h2 {
+    color: #ffffff;
+    font-size: clamp(25px, 4vw, 38px);
+    margin: 18px 0;
+}
+
+.portfolio-end p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #dce5df;
+    line-height: 1.8;
+}
+
+.portfolio-button {
+    display: inline-block;
+    padding: 14px 25px;
+
+    background: #c6a45c;
+    color: #183e32;
+
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.portfolio-button:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .portfolio-page {
+        padding: 40px 15px;
+    }
+
+    .portfolio-intro {
+        margin-bottom: 50px;
+    }
+
+    .portfolio-intro p {
+        font-size: 15px;
+    }
+
+    .skill-section {
+        grid-template-columns: 1fr;
+        padding: 28px 22px;
+        gap: 18px;
+    }
+
+    .skill-number {
+        font-size: 40px;
+    }
+
+    .skill-content h2 {
+        font-size: 23px;
+    }
+
+    .skill-content p {
+        font-size: 14px;
+    }
+
+    .portfolio-end {
+        padding: 40px 22px;
+    }
+
+}
+
+
+/* =====================================
+   SEÇÃO MEUS PROJETOS
+===================================== */
+
+.secao-projetos {
+    max-width: 1150px;
+    margin: 80px auto;
+    padding: 65px 25px;
+    border-top: 1px solid #e8eee9;
+}
+
+.projetos-cabecalho {
+    max-width: 800px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.projetos-kicker {
+    color: #c6a45c;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.projetos-cabecalho h2 {
+    color: #183e32;
+    font-size: clamp(30px, 5vw, 45px);
+    margin: 18px 0;
+}
+
+.projetos-cabecalho h2 span {
+    color: #c6a45c;
+}
+
+.projetos-cabecalho p {
+    color: #68736d;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* ORGANIZAÇÃO DOS CARDS */
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* CARD INDIVIDUAL */
+
+.projeto-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 30px;
+    min-height: 240px;
+
+    background: #f8faf8;
+    border: 1px solid #e5ebe6;
+    border-radius: 13px;
+
+    transition: 0.3s ease;
+}
+
+.projeto-card:hover {
+    border-color: #c6a45c;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px #183e3210;
+}
+
+.projeto-tag {
+    display: inline-block;
+    color: #c6a45c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+}
+
+.projeto-card h3 {
+    color: #183e32;
+    font-size: 21px;
+    margin: 0 0 15px;
+}
+
+.projeto-card p {
+    color: #68736d;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 0 25px;
+    white-space: pre-line;
+}
+
+/* LINK DO PROJETO */
+
+.projeto-link {
+    color: #183e32;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: auto;
+}
+
+.projeto-link:hover {
+    color: #c6a45c;
+}
+
+.projeto-sem-link {
+    color: #929b95;
+    font-size: 13px;
+    margin-top: auto;
+}
+
+/* MENSAGENS DE CARREGAMENTO E ERRO */
+
+.projetos-status {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #68736d;
+    padding: 35px 15px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 850px) {
+    .projetos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .secao-projetos {
+        padding: 45px 15px;
+        margin: 45px auto;
+    }
+
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projeto-card {
+        padding: 25px;
+    }
+}
+
+/* =====================================
+   PÁGINA QUEM SOU EU
+===================================== */
+
+.sobre-page {
+    padding: 70px 25px;
+    color: #26352e;
+    background: #ffffff;
+}
+
+.sobre-page section {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* APRESENTAÇÃO */
+
+.sobre-hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 70px;
+    margin-bottom: 100px !important;
+}
+
+.sobre-kicker,
+.sobre-titulo > span,
+.sobre-objetivos > span {
+    color: #c6a45c;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.sobre-intro h1 {
+    color: #183e32;
+    font-size: clamp(42px, 5vw, 62px);
+    margin: 20px 0;
+}
+
+.sobre-intro h1 span {
+    color: #c6a45c;
+}
+
+.sobre-intro h2 {
+    color: #183e32;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.sobre-intro p,
+.sobre-historia p {
+    color: #68736d;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* CARTÃO DE IDENTIFICAÇÃO */
+
+.sobre-card {
+    padding: 40px 30px;
+    background: #183e32;
+    color: #ffffff;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 12px 12px 0 #c6a45c;
+}
+
+.sobre-monograma {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #c6a45c;
+    color: #183e32;
+    border-radius: 50%;
+
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.sobre-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.sobre-card > span {
+    color: #d9c18f;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.sobre-linha {
+    height: 1px;
+    background: #ffffff30;
+    margin: 28px 0;
+}
+
+.sobre-dados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.sobre-dados div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sobre-dados strong {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.sobre-dados small {
+    color: #cbd8cf;
+    font-size: 12px;
+}
+
+/* TÍTULOS DAS SEÇÕES */
+
+.sobre-titulo {
+    margin-bottom: 35px;
+}
+
+.sobre-titulo h2 {
+    color: #183e32;
+    font-size: 34px;
+    margin-top: 12px;
+}
+
+/* HISTÓRIA */
+
+.sobre-historia {
+    padding: 45px 0;
+    border-top: 1px solid #e8eee9;
+}
+
+/* INTERESSES */
+
+.sobre-interesses {
+    padding: 65px 0;
+    border-top: 1px solid #e8eee9;
+}
+
+.interesses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.interesse-card {
+    padding: 30px 25px;
+    background: #f7f9f7;
+    border: 1px solid #e6ece7;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.interesse-card:hover {
+    transform: translateY(-5px);
+    border-color: #c6a45c;
+}
+
+.interesse-icon {
+    width: 48px;
+    height: 48px;
+    background: #183e32;
+    color: #c6a45c;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+}
+
+.interesse-card h3 {
+    color: #183e32;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.interesse-card p {
+    color: #68736d;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* TRAJETÓRIA */
+
+.sobre-trajetoria {
+    padding: 65px 0;
+    border-top: 1px solid #e8eee9;
+}
+
+.trajetoria-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.trajetoria-item {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    padding: 25px;
+
+    background: #f7f9f7;
+    border-radius: 12px;
+}
+
+.trajetoria-numero {
+    min-width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #183e32;
+    color: #c6a45c;
+    border-radius: 50%;
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.trajetoria-item h3 {
+    color: #183e32;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.trajetoria-item p {
+    color: #68736d;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* OBJETIVOS */
+
+.sobre-objetivos {
+    margin-top: 40px !important;
+    padding: 55px 35px;
+    background: #183e32;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.sobre-objetivos h2 {
+    color: #ffffff;
+    font-size: clamp(28px, 4vw, 40px);
+    margin: 20px 0;
+}
+
+.sobre-objetivos p {
+    max-width: 720px;
+    margin: 0 auto 30px;
+    color: #dce5df;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.sobre-botao {
+    display: inline-block;
+    padding: 15px 25px;
+    background: #c6a45c;
+    color: #183e32;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.sobre-botao:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .sobre-page {
+        padding: 45px 18px;
+    }
+
+    .sobre-hero {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        margin-bottom: 60px !important;
+    }
+
+    .sobre-intro h1 {
+        font-size: 43px;
+    }
+
+    .sobre-intro h2 {
+        font-size: 18px;
+    }
+
+    .sobre-card {
+        max-width: 400px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .interesses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-titulo h2 {
+        font-size: 28px;
+    }
+
+    .trajetoria-item {
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .sobre-objetivos {
+        padding: 40px 22px;
+    }
+}
