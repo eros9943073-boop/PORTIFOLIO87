@@ -4,36 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Portfólio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css">
+<!-- CABEÇALHO DO SITE -->
+<header class="cabecalho">
 
- 
+    <!-- MENU PRINCIPAL -->
+    <nav class="menu" aria-label="Menu principal">
 
-      <!-- 3. Ícone de cadeado à direita -->
-      <a href="login.html" class="botao-login" aria-label="Acessar área administrativa">
-        <i data-lucide="lock"></i>
-      </a>
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+            Eros<span>.dev</span>
+        </a>
 
+        <!-- LINKS DE NAVEGAÇÃO -->
+        <ul class="links-menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="quemsoueu.html">Quem sou eu</a></li>
+            <li><a href="portifolio.html">Portfolio</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+
+        <!-- CADEADO DA ÁREA ADMINISTRATIVA -->
+        <a href="login.html"
+           class="btn-cadeado"
+           aria-label="Acessar área administrativa"
+           title="Acessar área administrativa">
+
+            <i data-lucide="lock" aria-hidden="true"></i>
+        </a>
     </nav>
-  </header>
-  <!-- FIM DO MENU -->
-
-  <!-- Carrega a biblioteca Lucide e ativa os ícones -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
+</header>
+<!-- BIBLIOTECA DE ÍCONES -->
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
     lucide.createIcons();
-  </script>
+</script>
 
-</body>
-</html>
-</body>
-</html>
+
+<!-- SEÇÃO PRINCIPAL: HERO -->
+<section class="hero">
+
+    <div class="hero-container">
+
+        <!-- FOTO DO EROS -->
+        <div class="hero-foto">
+            <img 
+                src="img/foto.webp" 
+                alt="Foto de Eros, estudante de Informática"
+            >
+        </div>
+
+        <!-- APRESENTAÇÃO -->
+        <div class="hero-conteudo">
+
+            <span class="hero-destaque">
+                OLÁ, SEJA BEM-VINDO AO MEU PORTFÓLIO
+            </span>
+
+            <h1>
+                Eu sou <span>Eros.</span>
+            </h1>
+
+            <h2>Estudante de tecnologia e desenvolvimento web</h2>
+
+            <p>
+                Tenho 16 anos e estudo no EMTI, onde desenvolvo meus
+                conhecimentos na área de informática. Gosto de aprender,
+                criar projetos e explorar novas possibilidades utilizando
+                a tecnologia e a inteligência artificial.
+            </p>
+
+            <!-- HABILIDADES -->
+            <div class="hero-habilidades">
+
+                <span>HTML / CSS / JS</span>
+                <span>Banco de dados</span>
+                <span>Inteligência Artificial</span>
+
+            </div>
+
+            <!-- BOTÃO PARA O PORTFÓLIO -->
+            <a href="portifolio.html" class="hero-botao">
+                Conheça meus projetos
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</head>
+<body>
