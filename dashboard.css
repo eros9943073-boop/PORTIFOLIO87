@@ -1,178 +1,406 @@
-/* Reset básico para tirar margens padrão do navegador */
+
+/* ==========================================
+   EROS.DEV - DASHBOARD
+   Identidade visual: Verde, Dourado e Branco
+========================================== */
+
+:root {
+    --verde-escuro: #174c35;
+    --verde: #236b49;
+    --verde-claro: #eaf3ed;
+    --dourado: #c5a34a;
+    --dourado-claro: #e5d39a;
+    --branco: #ffffff;
+    --fundo: #f4f6f3;
+    --texto: #24352b;
+    --texto-suave: #718078;
+    --borda: #dce5dc;
+    --sombra: 0 8px 25px rgba(23, 76, 53, 0.08);
+}
+
+/* RESET */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  background-color: #f4f6f8;
-  color: #1e293b;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    min-height: 100vh;
 }
 
-/* Estilização do Menu */
-.cabecalho {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
-  padding: 1rem 2rem;
+
+.logo,
+.logo a {
+    color: var(--verde-escuro);
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.menu {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
-.logo {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #0f172a;
-  text-decoration: none;
+nav a {
+    color: var(--verde-escuro);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-.links-menu {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
+nav a:hover {
+    color: var(--dourado);
 }
 
-.links-menu a {
-  text-decoration: none;
-  color: #475569;
-  font-weight: 500;
-  transition: color 0.2s;
+/* ==========================================
+   CONTEÚDO PRINCIPAL
+========================================== */
+
+main {
+    width: 100%;
+    min-height: calc(100vh - 65px);
+    padding: 50px 20px;
 }
 
-.links-menu a:hover {
-  color: #2563eb;
-}
-
-.btn-sair {
-  color: #ef4444;
-  display: flex;
-  align-items: center;
-  transition: transform 0.2s;
-}
-
-.btn-sair:hover {
-  transform: scale(1.1);
-}
-
-/* Container e Cartão do Formulário */
+.dashboard-container,
 .container {
-  max-width: 600px;
-  margin: 3rem auto;
-  padding: 0 1rem;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
-.card-formulario {
-  background-color: #ffffff;
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e2e8f0;
+/* ==========================================
+   CARD DO FORMULÁRIO
+========================================== */
+
+.form-container,
+.project-form,
+.card {
+    width: 100%;
+    background: var(--branco);
+    padding: 38px;
+    border-radius: 14px;
+    border: 1px solid var(--borda);
+    border-top: 4px solid var(--dourado);
+    box-shadow: var(--sombra);
 }
 
-.titulo-secao {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  color: #0f172a;
-  margin-bottom: 0.5rem;
+h1, h2 {
+    color: var(--verde-escuro);
+    margin-bottom: 12px;
+    font-weight: 700;
 }
 
-.titulo-secao svg {
-  color: #2563eb;
+h1 {
+    font-size: 29px;
 }
 
-.subtitulo {
-  color: #64748b;
-  font-size: 0.95rem;
-  margin-bottom: 2rem;
+h2 {
+    font-size: 23px;
 }
 
-/* Campos do Formulário */
-.campo {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.25rem;
+p {
+    color: var(--texto-suave);
+    line-height: 1.6;
 }
 
-.campo label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #334155;
+/* ==========================================
+   CAMPOS DO FORMULÁRIO
+========================================== */
+
+.form-group {
+    margin-bottom: 23px;
 }
 
-.campo input,
-.campo textarea {
-  padding: 0.75rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border-color 0.2s;
+label {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--verde-escuro);
+    font-size: 14px;
+    font-weight: 600;
 }
 
-.campo input:focus,
-.campo textarea:focus {
-  outline: none;
-  border-color: #2563eb;
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    outline: none;
+    background: #fcfdfb;
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
-/* Botão de Salvar */
-.btn-primario {
-  width: 100%;
-  background-color: #2563eb;
-  color: #ffffff;
-  border: none;
-  padding: 0.85rem;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  transition: background-color 0.2s;
+textarea {
+    min-height: 120px;
+    resize: vertical;
 }
 
-.btn-primario:hover {
-  background-color: #1d4ed8;
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px rgba(35, 107, 73, 0.10);
+    background: var(--branco);
 }
 
-.btn-primario:disabled {
-  background-color: #94a3b8;
-  cursor: not-allowed;
+input::placeholder,
+textarea::placeholder {
+    color: #9aa69e;
 }
 
-/* Mensagens de Feedback */
-.status-oculto {
-  display: none;
+/* ==========================================
+   BOTÕES
+========================================== */
+
+button,
+.btn,
+button[type="submit"],
+input[type="submit"] {
+    border: none;
+    border-radius: 8px;
+    padding: 15px 22px;
+    background: var(--verde-escuro);
+    color: var(--branco);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.status-sucesso {
-  display: block;
-  margin-top: 1rem;
-  padding: 0.75rem;
-  background-color: #dcfce7;
-  color: #166534;
-  border-radius: 6px;
-  text-align: center;
-  font-size: 0.9rem;
+button:hover,
+.btn:hover,
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+    background: var(--verde);
+    box-shadow: 0 5px 15px rgba(23, 76, 53, 0.18);
+    transform: translateY(-2px);
 }
 
-.status-erro {
-  display: block;
-  margin-top: 1rem;
-  padding: 0.75rem;
-  background-color: #fee2e2;
-  color: #991b1b;
-  border-radius: 6px;
-  text-align: center;
-  font-size: 0.9rem;
+/* Botão principal do formulário */
+
+.btn-salvar,
+.btn-primary {
+    width: 100%;
+    background: var(--verde-escuro);
+    border-bottom: 3px solid var(--dourado);
+}
+
+/* ==========================================
+   LINKS
+========================================== */
+
+a {
+    transition: 0.3s;
+}
+
+.projeto-link {
+    color: var(--verde);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.projeto-link:hover {
+    color: var(--dourado);
+}
+
+/* ==========================================
+   CARDS DE PROJETOS
+========================================== */
+
+.projeto-card {
+    background: var(--branco);
+    padding: 24px;
+    border: 1px solid var(--borda);
+    border-left: 4px solid var(--dourado);
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.projeto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(23, 76, 53, 0.12);
+}
+
+.projeto-card h3 {
+    color: var(--verde-escuro);
+    margin: 12px 0;
+}
+
+.projeto-tag {
+    color: var(--dourado);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.projetos-status {
+    text-align: center;
+    padding: 20px;
+    color: var(--texto-suave);
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 768px) {
+
+    header,
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+    .form-container,
+    .project-form,
+    .card {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .form-container,
+    .project-form,
+    .card {
+        padding: 20px 15px;
+    }
+}
+/* CORES DO MENU */
+:root {
+    --menu-verde: #183e32;
+    --menu-dourado: #c6a45c;
+    --menu-branco: #ffffff;
+    --menu-texto: #26352e;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    width: 100%;
+    background-color: var(--menu-branco);
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ORGANIZAÇÃO DO MENU */
+.menu {
+    max-width: 1200px;
+    min-height: 85px;
+    margin: auto;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+/* LOGO */
+.logo {
+    color: var(--menu-verde);
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--menu-dourado);
+}
+
+/* LINKS */
+.links-menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* APARÊNCIA DOS LINKS */
+.links-menu a {
+    color: var(--menu-texto);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+/* EFEITO DO MOUSE */
+.links-menu a:hover {
+    color: var(--menu-dourado);
+}
+
+/* ACESSIBILIDADE */
+.menu a:focus-visible {
+    outline: 3px solid var(--menu-dourado);
+    outline-offset: 4px;
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    .menu {
+        min-height: 75px;
+        padding: 12px 15px;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .links-menu {
+        gap: 12px;
+    }
+
+    .links-menu a {
+        font-size: 12px;
+    }
 }
