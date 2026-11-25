@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 <!-- CABEÇALHO DO SITE -->
 <header class="cabecalho">
+    <link rel="stylesheet" href="contato.css">
 
     <!-- MENU PRINCIPAL -->
     <nav class="menu" aria-label="Menu principal">
@@ -42,6 +43,197 @@
 <script>
     lucide.createIcons();
 </script>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="pagina-contato">
+
+        <section class="introducao">
+
+            <span class="subtitulo">FALE COMIGO</span>
+
+            <h1>
+                Vamos conversar<span>?</span>
+            </h1>
+
+            <p>
+                Tem alguma dúvida, sugestão ou ideia de projeto?
+                Preencha o formulário abaixo. Será um prazer receber sua mensagem!
+            </p>
+
+        </section>
+
+
+        <!-- ÁREA DO FORMULÁRIO -->
+        <section class="contato-container">
+
+            <!-- LADO ESQUERDO -->
+            <div class="contato-info">
+
+                <span class="detalhe">CONTATO</span>
+
+                <h2>
+                    Vamos criar algo
+                    <span>incrível!</span>
+                </h2>
+
+                <p>
+                    Este espaço foi criado para facilitar a comunicação.
+                    Envie sua mensagem e compartilhe suas ideias.
+                </p>
+
+                <div class="info-item">
+
+                    <div class="info-icone">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="23" height="23" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M4 4h16v16H4z"/>
+                            <path d="m22 6-10 7L2 6"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h3>Comunicação</h3>
+                        <p>Envie sua mensagem pelo formulário.</p>
+                    </div>
+
+                </div>
+
+                <div class="info-item">
+
+                    <div class="info-icone">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="23" height="23" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M12 2v4"/>
+                            <path d="m16.2 7.8 2.8-2.8"/>
+                            <path d="M18 12h4"/>
+                            <path d="m16.2 16.2 2.8 2.8"/>
+                            <path d="M12 18v4"/>
+                            <path d="m4 19 3-3"/>
+                            <path d="M2 12h4"/>
+                            <path d="m4 5 3 3"/>
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h3>Novas ideias</h3>
+                        <p>Compartilhe sugestões e oportunidades.</p>
+                    </div>
+
+                </div>
+
+                <div class="decoracao">
+                    <span>EP</span>
+                </div>
+
+            </div>
+
+
+            <!-- LADO DIREITO: FORMULÁRIO -->
+            <div class="formulario-area">
+
+                <div class="formulario-titulo">
+                    <h2>Envie uma mensagem</h2>
+                    <p>Preencha os campos abaixo para entrar em contato.</p>
+                </div>
+
+                <form id="formContato" onsubmit="event.preventDefault();">
+
+                    <div class="campo">
+                        <label for="nome">Nome completo</label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            autocomplete="name"
+                            required>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="seuemail@exemplo.com"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="assunto">Assunto</label>
+
+                        <input
+                            type="text"
+                            id="assunto"
+                            name="assunto"
+                            placeholder="Qual é o assunto?"
+                            required>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            placeholder="Escreva sua mensagem..."
+                            rows="6"
+                            maxlength="1500"
+                            required></textarea>
+                    </div>
+
+
+                    <button type="submit" class="botao-enviar">
+                        Enviar mensagem
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            width="19" height="19"
+                            viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="m22 2-7 20-4-9-9-4Z"/>
+                            <path d="M22 2 11 13"/>
+                        </svg>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <p>
+            © 2026 <span>Eros Pereira</span>.
+            Todos os direitos reservados.
+        </p>
+
+        <p>Desenvolvido com dedicação e tecnologia.</p>
+    </footer>
+
+</body>
+</html>
 </head>
 <body>
