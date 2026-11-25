@@ -1,103 +1,149 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Área Administrativa</title>
-  <style>
-    body {
-        min-height: 100vh;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Área Administrativa</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9f6;
+  font-family: Georgia, serif;
+  color: #173f32;
+}
+
+header {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}
+
+.login-card {
+  width: 380px;
+  max-width: calc(100% - 40px);
+  padding: 35px;
+  background: white;
+  border: 2px solid #c9a34e;
+  border-radius: 18px;
+  box-shadow: 10px 10px 0 #173f32;
+}
+
+.login-card h1 { color: #173f32; }
+
+.login-card input {
+  width: 100%;
+  padding: 11px;
+  margin: 8px 0 18px;
+  border: 1px solid #c9a34e;
+  border-radius: 7px;
+  outline-color: #173f32;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background: #173f32;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-card button:hover {
+  background: #c9a34e;
+}
+
+.login-card a { color: #b38b3e; }
+
+#mensagem-erro {
+  color: #b33a3a;
+  font-size: 14px;
+}
 </style>
 </head>
+
 <body>
 
-  <header>
-    <a href="index.html">← Voltar para o portfólio</a>
-  </header>
+<header>
+  <a href="index.html">← Voltar para o portfólio</a>
+</header>
 
-  <main>
-    <h1>Acesso Restrito</h1>
-    <p>Entre com seu usuário e senha para gerenciar o portfólio.</p>
+<main class="login-card">
 
-    <form id="form-login">
-      <div>
-        <label for="usuario">Usuário:</label><br>
-        <input type="text" id="usuario" name="usuario" required>
-      </div>
+  <h1>Acesso Restrito</h1>
+  <p>Entre com seu usuário e senha para gerenciar o portfólio.</p>
 
-      <br>
+  <form id="form-login">
 
-      <div>
-        <label for="senha">Senha:</label><br>
-        <input type="password" id="senha" name="senha" required>
-      </div>
+    <div>
+      <label for="usuario">Usuário:</label>
+      <input type="text" id="usuario" name="usuario" required>
+    </div>
 
-      <br>
+    <div>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+    </div>
 
-      <button type="submit">Entrar</button>
-    </form>
+    <button type="submit">Entrar →</button>
 
-    <p id="mensagem-erro"></p>
-  </main>
+  </form>
 
-  <!-- 1. Importa a biblioteca oficial do Supabase -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <p id="mensagem-erro"></p>
 
-  <!-- 2. Lógica de conexão e autenticação -->
-  <script>
-    // =====================================================================
-    // CONFIGURAÇÃO DO SUPABASE
-    // Pegue esses dois dados no painel do Supabase em:
-    // Project Settings (ícone de engrenagem) -> API
-    // =====================================================================
-    const SUPABASE_URL = 'https://yatsmsvttvldmupcatjd.supabase.co';
-    const SUPABASE_KEY = 'sb_publishable_wfdIRdpeCGp0bRpjSFr8mw_f1EwGQZz';
+</main>
 
-    // Inicia a conexão com o seu banco
-    const bancoDados = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-    const formulario = document.getElementById('form-login');
-    const mensagemErro = document.getElementById('mensagem-erro');
+<script>
+const SUPABASE_URL = 'https://yatsmsvttvldmupcatjd.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_wfdIRdpeCGp0bRpjSFr8mw_f1EwGQZz';
 
-    formulario.addEventListener('submit', async function(evento) {
-      evento.preventDefault();
+const bancoDados = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-      const usuarioDigitado = document.getElementById('usuario').value.trim();
-      const senhaDigitada = document.getElementById('senha').value;
+const formulario = document.getElementById('form-login');
+const mensagemErro = document.getElementById('mensagem-erro');
 
-      mensagemErro.textContent = "Consultando banco de dados...";
+formulario.addEventListener('submit', async function(evento) {
+  evento.preventDefault();
 
-      // 3. Faz a busca na tabela 'Usuarios'
-      const { data, error } = await bancoDados
-        .from('usuarios')          // Nome exato da sua tabela
-        .select('*')               // Traz todas as colunas do registro encontrado
-        .eq('usuario', usuarioDigitado) // Onde a coluna 'usuario' seja igual ao digitado
-        .eq('senha', senhaDigitada)     // E a coluna 'senha' seja igual à digitada
-        .maybeSingle();            // Retorna 1 objeto se achar, ou null se não achar
+  const usuarioDigitado = document.getElementById('usuario').value.trim();
+  const senhaDigitada = document.getElementById('senha').value;
 
-      // 4. Verifica se houve falha de conexão ou configuração
-      if (error) {
-        console.error("Erro técnico do Supabase:", error);
-        mensagemErro.textContent = "Erro ao conectar com o banco. Verifique o console (F12).";
-        return;
-      }
+  mensagemErro.textContent = "Consultando banco de dados...";
 
-      // 5. Se 'data' existir, significa que usuário e senha bateram no banco!
-      if (data) {
-        localStorage.setItem('usuarioLogado', 'true');
-        localStorage.setItem('nomeUsuario', data.usuario);
-        
-        window.location.href = "dashboard.html";
-      } else {
-        mensagemErro.textContent = "Usuário ou senha incorretos.";
-      }
-    });
-  </script>
+  const { data, error } = await bancoDados
+    .from('usuarios')
+    .select('*')
+    .eq('usuario', usuarioDigitado)
+    .eq('senha', senhaDigitada)
+    .maybeSingle();
+
+  if (error) {
+    console.error("Erro técnico do Supabase:", error);
+    mensagemErro.textContent = "Erro ao conectar com o banco. Verifique o console (F12).";
+    return;
+  }
+
+  if (data) {
+    localStorage.setItem('usuarioLogado', 'true');
+    localStorage.setItem('nomeUsuario', data.usuario);
+
+    window.location.href = "dashboard.html";
+  } else {
+    mensagemErro.textContent = "Usuário ou senha incorretos.";
+  }
+});
+</script>
 
 </body>
 </html>
