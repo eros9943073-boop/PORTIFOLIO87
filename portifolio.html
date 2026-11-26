@@ -1,23 +1,21 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Eros.dev</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
+    <title></title>
 <!-- CABEÇALHO DO SITE -->
 <header class="cabecalho">
+<link rel="stylesheet" href="style.css">
+    <!-- MENU PRINCIPAL -->
     <nav class="menu" aria-label="Menu principal">
 
+        <!-- LOGO -->
         <a href="index.html" class="logo">
             Eros<span>.dev</span>
         </a>
 
+        <!-- LINKS DE NAVEGAÇÃO -->
         <ul class="links-menu">
             <li><a href="index.html">Início</a></li>
             <li><a href="quemsoueu.html">Quem sou eu</a></li>
@@ -25,290 +23,75 @@
             <li><a href="contato.html">Contato</a></li>
         </ul>
 
+        <!-- CADEADO DA ÁREA ADMINISTRATIVA -->
         <a href="login.html"
            class="btn-cadeado"
            aria-label="Acessar área administrativa"
            title="Acessar área administrativa">
+
             <i data-lucide="lock" aria-hidden="true"></i>
         </a>
-
     </nav>
 </header>
-
-
-<!-- CONTEÚDO PRINCIPAL -->
-<main class="portfolio-page">
-
-    <!-- APRESENTAÇÃO -->
-    <header class="portfolio-intro">
-        <span class="portfolio-kicker">MINHAS HABILIDADES / 2026</span>
-
-        <h1>O que estou aprendendo e <span>desenvolvendo</span></h1>
-    </header>
-
-
-    <!-- 01 - HTML -->
-    <section class="skill-section" id="html">
-
-        <div class="skill-number">01</div>
-
-        <div class="skill-content">
-            <span class="skill-label">ESTRUTURA WEB</span>
-
-            <h2>HTML: a estrutura das páginas</h2>
-
-            <p>
-                Uma das minhas primeiras experiências com desenvolvimento
-                web foi aprender HTML. Essa linguagem é responsável por
-                organizar os elementos que aparecem em uma página, como
-                títulos, parágrafos, imagens, links e formulários.
-                Durante meus estudos, aprendi a utilizar diferentes tags
-                para construir páginas com uma estrutura organizada.
-            </p>
-
-            <p>
-                Também venho trabalhando com HTML semântico, utilizando
-                elementos como header, nav, main, section, article e footer.
-                Entendi que desenvolver uma página não significa apenas
-                colocar informações na tela, mas também organizar o
-                conteúdo de maneira que os navegadores e mecanismos de
-                busca consigam compreender melhor o site.
-            </p>
-
-            <div class="skill-tags">
-                <span>HTML5</span>
-                <span>Tags semânticas</span>
-                <span>Formulários</span>
-                <span>SEO</span>
-            </div>
-        </div>
-
-    </section>
-
-
-    <!-- 02 - CSS -->
-    <section class="skill-section skill-reverse" id="css">
-
-        <div class="skill-number">02</div>
-
-        <div class="skill-content">
-            <span class="skill-label">ESTILIZAÇÃO E DESIGN</span>
-
-            <h2>CSS: dando identidade aos projetos</h2>
-
-            <p>
-                Depois de aprender a estruturar páginas com HTML,
-                comecei a estudar CSS para trabalhar a aparência dos
-                meus projetos. Com ele, consigo modificar cores,
-                tamanhos, fontes, espaçamentos, bordas e organizar
-                os elementos de diferentes maneiras.
-            </p>
-
-            <p>
-                Tenho aprendido a criar layouts utilizando Flexbox,
-                Grid e responsividade. Uma das coisas que considero
-                importantes é fazer com que um site funcione bem
-                tanto em computadores quanto em celulares.
-                Também procuro escolher combinações de cores e
-                elementos visuais que deixem cada projeto organizado,
-                agradável e fácil de utilizar.
-            </p>
-
-            <div class="skill-tags">
-                <span>CSS3</span>
-                <span>Flexbox</span>
-                <span>Grid</span>
-                <span>Responsividade</span>
-                <span>Design</span>
-            </div>
-        </div>
-
-    </section>
-
-
-    <!-- 03 - JAVASCRIPT -->
-    <section class="skill-section" id="javascript">
-
-        <div class="skill-number">03</div>
-
-        <div class="skill-content">
-            <span class="skill-label">INTERATIVIDADE</span>
-
-            <h2>JavaScript: criando funcionalidades</h2>
-
-            <p>
-                O JavaScript foi uma etapa importante na minha
-                aprendizagem porque comecei a entender como tornar
-                uma página interativa. Com ele, posso criar botões
-                funcionais, validar formulários, responder às ações
-                dos usuários e modificar elementos da página
-                sem precisar recarregá-la.
-            </p>
-
-            <p>
-                Nos meus estudos, venho praticando variáveis,
-                funções, condições, eventos e manipulação do DOM.
-                Também comecei a utilizar JavaScript para conectar
-                meus projetos a bancos de dados e trabalhar com
-                informações recebidas de outros serviços.
-                Quero continuar aprofundando meus conhecimentos
-                para desenvolver sistemas cada vez mais completos.
-            </p>
-
-            <div class="skill-tags">
-                <span>JavaScript</span>
-                <span>DOM</span>
-                <span>Eventos</span>
-                <span>Funções</span>
-                <span>APIs</span>
-            </div>
-        </div>
-
-    </section>
-
-
-    <!-- 04 - BANCO DE DADOS -->
-    <section class="skill-section skill-reverse" id="banco-de-dados">
-
-        <div class="skill-number">04</div>
-
-        <div class="skill-content">
-            <span class="skill-label">ARMAZENAMENTO DE DADOS</span>
-
-            <h2>Banco de Dados: organizando informações</h2>
-
-            <p>
-                Outro conhecimento que venho desenvolvendo é o
-                trabalho com bancos de dados. Aprendi que eles
-                permitem armazenar, organizar, consultar e atualizar
-                informações de maneira estruturada.
-            </p>
-
-            <p>
-                Durante o desenvolvimento do meu portfólio, comecei
-                a utilizar o Supabase para conectar o site a um
-                banco de dados. Com essa ferramenta, estou aprendendo
-                a trabalhar com tabelas, registros, autenticação
-                de usuários e operações de cadastro.
-                Um dos meus desafios foi integrar o painel administrativo
-                ao banco para cadastrar projetos e armazenar
-                informações que poderão ser exibidas no site.
-            </p>
-
-            <div class="skill-tags">
-                <span>Supabase</span>
-                <span>SQL</span>
-                <span>Tabelas</span>
-                <span>CRUD</span>
-                <span>Autenticação</span>
-            </div>
-        </div>
-
-    </section>
-
-
-    <!-- 05 - INTELIGÊNCIA ARTIFICIAL -->
-    <section class="skill-section" id="inteligencia-artificial">
-
-        <div class="skill-number">05</div>
-
-        <div class="skill-content">
-            <span class="skill-label">TECNOLOGIA E INOVAÇÃO</span>
-
-            <h2>Inteligência Artificial: aprendendo com novas ferramentas</h2>
-
-            <p>
-                A inteligência artificial também faz parte da minha
-                rotina de aprendizagem. Utilizo ferramentas de IA
-                como apoio nos estudos e no desenvolvimento dos meus
-                projetos. Elas me ajudam a compreender conceitos,
-                identificar possíveis erros nos códigos, organizar
-                ideias e encontrar diferentes maneiras de resolver
-                problemas.
-            </p>
-
-            <p>
-                Um dos aprendizados mais importantes foi perceber
-                que não basta copiar um código gerado por uma
-                inteligência artificial. Procuro entender o que
-                cada parte faz, testar as funcionalidades e analisar
-                os resultados. Acredito que a IA é uma ferramenta
-                que pode ampliar nossas possibilidades, mas que
-                aprender, pensar e desenvolver nossas próprias
-                soluções continua sendo fundamental.
-            </p>
-
-            <div class="skill-tags">
-                <span>Inteligência Artificial</span>
-                <span>Engenharia de prompts</span>
-                <span>Resolução de problemas</span>
-                <span>Aprendizagem</span>
-            </div>
-        </div>
-
-    </section>
-
-
-    <!-- FINAL DA PÁGINA -->
-    <div class="portfolio-end">
-
-        <span>CONTINUO EM EVOLUÇÃO</span>
-
-        <h2>Minha jornada na tecnologia está apenas começando.</h2>
-
-        <p>
-            Cada conhecimento adquirido representa uma nova oportunidade
-            de criar, experimentar e transformar ideias em projetos.
-            Quero continuar aprendendo, praticando e evoluindo.
-        </p>
-
-        <a href="index.html" class="portfolio-button">
-            Voltar ao início →
-        </a>
-
-    </div>
-
-
-    <!-- SEÇÃO: MEUS PROJETOS -->
-    <section class="secao-projetos" id="meus-projetos">
-
-        <div class="projetos-cabecalho">
-
-            <span class="projetos-kicker">MEUS TRABALHOS / 06</span>
-
-            <h2>Projetos que coloquei em <span>prática</span></h2>
-
-            <p>
-                Aqui apresento alguns dos projetos que desenvolvi durante
-                meus estudos em Informática. Cada trabalho representa
-                uma experiência, um aprendizado e uma nova oportunidade
-                de colocar meus conhecimentos em prática.
-            </p>
-
-        </div>
-
-        <!-- PROJETOS CARREGADOS DO SUPABASE -->
-        <div id="lista-projetos"
-             class="projetos-grid"
-             aria-live="polite">
-
-            <p class="projetos-status">Carregando projetos...</p>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<!-- BIBLIOTECAS E JAVASCRIPT -->
+<!-- BIBLIOTECA DE ÍCONES -->
 <script src="https://unpkg.com/lucide@latest"></script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="portifolio-projetos.js"></script>
-
 <script>
     lucide.createIcons();
 </script>
 
-</body>
-</html>
+
+<!-- SEÇÃO PRINCIPAL: HERO -->
+<section class="hero">
+
+    <div class="hero-container">
+
+        <!-- FOTO DO EROS -->
+        <div class="hero-foto">
+            <img 
+                src="bb08864b-aa06-4c6f-b9bd-63c6c521de11.png" alt="Foto de animação de Eros, estudante de Informática"
+            >
+        </div>
+
+        <!-- APRESENTAÇÃO -->
+        <div class="hero-conteudo">
+
+            <span class="hero-destaque">
+                OLÁ, SEJA BEM-VINDO AO MEU PORTFÓLIO
+            </span>
+
+            <h1>
+                Eu sou <span>Eros.</span>
+            </h1>
+
+            <h2>Estudante de tecnologia e desenvolvimento web</h2>
+
+            <p>
+                Tenho 16 anos e estudo no EMTI, onde desenvolvo meus
+                conhecimentos na área de informática. Gosto de aprender,
+                criar projetos e explorar novas possibilidades utilizando
+                a tecnologia e a inteligência artificial.
+            </p>
+
+            <!-- HABILIDADES -->
+            <div class="hero-habilidades">
+
+                <span>HTML / CSS / JS</span>
+                <span>Banco de dados</span>
+                <span>Inteligência Artificial</span>
+
+            </div>
+
+            <!-- BOTÃO PARA O PORTFÓLIO -->
+            <a href="portifolio.html" class="hero-botao">
+                Conheça meus projetos
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</head>
+<body>
