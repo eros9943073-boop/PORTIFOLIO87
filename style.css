@@ -977,3 +977,600 @@
         padding: 40px 22px;
     }
 }
+
+
+/* =========================================
+   PÁGINA INICIAL - EROS.DEV
+========================================= */
+
+.home-page {
+    --home-verde-escuro: #123c2d;
+    --home-verde: #1c6046;
+    --home-dourado: #c9a343;
+    --home-dourado-claro: #e6c875;
+    --home-texto: #26372f;
+    --home-cinza: #748078;
+
+    color: var(--home-texto);
+}
+
+
+/* =========================================
+   BOTÕES DA APRESENTAÇÃO
+========================================= */
+
+.home-hero-acoes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.home-link-secundario {
+    color: var(--home-verde-escuro);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.home-link-secundario:hover {
+    color: var(--home-dourado);
+}
+
+
+/* =========================================
+   SEÇÕES GERAIS
+========================================= */
+
+.home-section {
+    padding: 82px 24px;
+}
+
+.home-container {
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.home-ia {
+    background: #f3f6f1;
+}
+
+.home-section-heading {
+    max-width: 760px;
+    margin-bottom: 38px;
+}
+
+.home-kicker {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: var(--home-dourado);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.3px;
+}
+
+.home-section-heading h2,
+.home-jornada-texto h2 {
+    margin: 0 0 15px;
+    color: var(--home-verde-escuro);
+    font-size: clamp(27px, 4vw, 39px);
+    line-height: 1.2;
+}
+
+.home-section-heading h2 span,
+.home-jornada-texto h2 span {
+    color: var(--home-dourado);
+}
+
+.home-section-heading > p {
+    max-width: 700px;
+    margin: 0;
+    color: var(--home-cinza);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CARDS DE INTELIGÊNCIA ARTIFICIAL
+========================================= */
+
+.ia-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.ia-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 315px;
+    padding: 27px;
+
+    background: #ffffff;
+    border: 1px solid #e7ece5;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(18, 60, 45, 0.045);
+
+    transition: 0.25s;
+}
+
+.ia-card:hover,
+.pioneiro-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(201, 163, 67, 0.65);
+    box-shadow: 0 16px 35px rgba(18, 60, 45, 0.09);
+}
+
+.ia-card-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.ia-numero,
+.pioneiro-numero {
+    color: #a1aaa2;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.ia-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 47px;
+    height: 47px;
+
+    color: var(--home-dourado);
+    background: #f8f4e8;
+    border: 1px solid #eee3c5;
+    border-radius: 13px;
+}
+
+.ia-icone svg {
+    width: 23px;
+    height: 23px;
+}
+
+.ia-etiqueta {
+    margin-bottom: 9px;
+    color: var(--home-verde);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.ia-card h3,
+.pioneiro-card h3 {
+    margin: 0 0 11px;
+    color: var(--home-verde-escuro);
+    font-size: 20px;
+}
+
+.ia-card p,
+.pioneiro-card p {
+    margin: 0 0 21px;
+    color: var(--home-cinza);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.ia-card a,
+.pioneiro-card a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: auto;
+
+    color: var(--home-verde);
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.ia-card a:hover,
+.pioneiro-card a:hover {
+    color: var(--home-dourado);
+}
+
+
+/* =========================================
+   REFLEXÃO SOBRE INTELIGÊNCIA ARTIFICIAL
+========================================= */
+
+.home-aviso-ia {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    margin-top: 25px;
+    padding: 19px 22px;
+
+    background: #fffdf7;
+    border: 1px solid #eee5ce;
+    border-left: 4px solid var(--home-dourado);
+    border-radius: 10px;
+}
+
+.home-aviso-icone {
+    display: inline-flex;
+    flex: 0 0 38px;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    color: var(--home-dourado);
+    background: #f7efd9;
+    border-radius: 10px;
+}
+
+.home-aviso-icone svg {
+    width: 19px;
+    height: 19px;
+}
+
+.home-aviso-ia p {
+    margin: 0;
+    color: #5f685f;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.home-aviso-ia strong {
+    color: var(--home-verde-escuro);
+}
+
+
+/* =========================================
+   REFERÊNCIAS DA PROGRAMAÇÃO
+========================================= */
+
+.home-referencias {
+    background: #ffffff;
+}
+
+.home-heading-centralizado {
+    max-width: 780px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.home-heading-centralizado > p {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pioneiros-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.pioneiro-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 355px;
+    padding: 23px;
+
+    background: #fbfcfa;
+    border: 1px solid #e8ede7;
+    border-radius: 15px;
+
+    transition: 0.25s;
+}
+
+.pioneiro-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 23px;
+}
+
+.pioneiro-iniciais {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    color: var(--home-dourado-claro);
+    background: var(--home-verde-escuro);
+    border: 2px solid rgba(201, 163, 67, 0.65);
+    border-radius: 50%;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.pioneiro-area {
+    display: block;
+    min-height: 34px;
+    margin: -3px 0 13px;
+
+    color: #9a7b32;
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   MINHA EVOLUÇÃO
+========================================= */
+
+.home-jornada {
+    background: #f3f6f1;
+}
+
+.home-jornada-painel {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+
+    gap: 55px;
+    align-items: center;
+
+    padding: 48px;
+
+    background: #ffffff;
+    border: 1px solid #e7ece5;
+    border-radius: 18px;
+
+    box-shadow: 0 12px 35px rgba(18, 60, 45, 0.05);
+}
+
+.home-jornada-texto > p {
+    max-width: 510px;
+    margin: 0 0 25px;
+
+    color: var(--home-cinza);
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+.home-botao-contorno {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 13px 19px;
+
+    color: var(--home-verde-escuro);
+    border: 1px solid var(--home-dourado);
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.home-botao-contorno:hover {
+    color: #ffffff;
+    background: var(--home-verde-escuro);
+    border-color: var(--home-verde-escuro);
+}
+
+.home-jornada-itens {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.jornada-item {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    padding: 17px;
+
+    background: #f8faf7;
+    border: 1px solid #e9eee8;
+    border-radius: 11px;
+}
+
+.jornada-item-numero {
+    display: inline-flex;
+    flex: 0 0 39px;
+    align-items: center;
+    justify-content: center;
+
+    width: 39px;
+    height: 39px;
+
+    color: var(--home-dourado);
+    background: var(--home-verde-escuro);
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.jornada-item h3 {
+    margin: 0 0 5px;
+    color: var(--home-verde-escuro);
+    font-size: 14px;
+}
+
+.jornada-item p {
+    margin: 0;
+    color: var(--home-cinza);
+    font-size: 12px;
+}
+
+
+/* =========================================
+   CHAMADA PARA CONTATO
+========================================= */
+
+.home-cta {
+    padding: 54px 24px;
+    color: #ffffff;
+    background: var(--home-verde-escuro);
+}
+
+.home-cta-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.home-cta .home-kicker {
+    color: var(--home-dourado-claro);
+}
+
+.home-cta h2 {
+    max-width: 650px;
+    margin: 0 0 10px;
+
+    color: #ffffff;
+    font-size: clamp(24px, 3.5vw, 34px);
+    line-height: 1.25;
+}
+
+.home-cta p {
+    margin: 0;
+    color: #d0ded5;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.home-cta-botao {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 13px;
+
+    padding: 15px 21px;
+
+    color: var(--home-verde-escuro);
+    background: var(--home-dourado-claro);
+    border: 1px solid var(--home-dourado-claro);
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.home-cta-botao:hover {
+    transform: translateY(-2px);
+    background: #ffffff;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+.home-rodape {
+    padding: 23px 20px;
+
+    color: #788179;
+    background: #ffffff;
+    border-top: 1px solid #e8ece7;
+
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.home-rodape p {
+    margin: 3px 0;
+}
+
+.home-rodape strong {
+    color: var(--home-verde-escuro);
+}
+
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .pioneiros-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-jornada-painel {
+        gap: 30px;
+        padding: 35px;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES
+========================================= */
+
+@media (max-width: 760px) {
+
+    .home-section {
+        padding: 62px 20px;
+    }
+
+    .ia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ia-card {
+        min-height: 0;
+    }
+
+    .home-jornada-painel {
+        grid-template-columns: 1fr;
+        padding: 28px 23px;
+    }
+
+    .home-cta-conteudo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .pioneiros-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pioneiro-card {
+        min-height: 0;
+    }
+
+    .home-aviso-ia {
+        align-items: flex-start;
+        padding: 16px;
+    }
+
+    .home-hero-acoes {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
