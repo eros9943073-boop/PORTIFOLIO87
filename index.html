@@ -1,97 +1,640 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-<!-- CABEÇALHO DO SITE -->
-<header class="cabecalho">
-<link rel="stylesheet" href="style.css">
-    <!-- MENU PRINCIPAL -->
-    <nav class="menu" aria-label="Menu principal">
 
-        <!-- LOGO -->
-        <a href="index.html" class="logo">
-            Eros<span>.dev</span>
-        </a>
+    <meta name="description" content="Conheça Eros, estudante de Informática interessado em desenvolvimento web, tecnologia e inteligência artificial.">
 
-        <!-- LINKS DE NAVEGAÇÃO -->
-        <ul class="links-menu">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="quemsoueu.html">Quem sou eu</a></li>
-            <li><a href="portifolio.html">Portfolio</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
+    <meta name="theme-color" content="#123c2d">
 
-        <!-- CADEADO DA ÁREA ADMINISTRATIVA -->
-        <a href="login.html"
-           class="btn-cadeado"
-           aria-label="Acessar área administrativa"
-           title="Acessar área administrativa">
+    <title>Eros.dev | Meu Portfólio</title>
 
-            <i data-lucide="lock" aria-hidden="true"></i>
-        </a>
-    </nav>
-</header>
-<!-- BIBLIOTECA DE ÍCONES -->
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-    lucide.createIcons();
-</script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         MENU PRINCIPAL
+    ====================================== -->
+
+    <header class="cabecalho">
+        <nav class="menu" aria-label="Menu principal">
+
+            <a href="index.html" class="logo">
+                Eros<span>.dev</span>
+            </a>
+
+            <ul class="links-menu">
+                <li><a href="index.html" aria-current="page">Início</a></li>
+                <li><a href="quemsoueu.html">Quem sou eu</a></li>
+                <li><a href="portifolio.html">Portfolio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+
+            <a href="login.html"
+               class="btn-cadeado"
+               aria-label="Acessar área administrativa"
+               title="Acessar área administrativa">
+
+                <i data-lucide="lock" aria-hidden="true"></i>
+
+            </a>
+
+        </nav>
+    </header>
 
 
-<!-- SEÇÃO PRINCIPAL: HERO -->
-<section class="hero">
+    <main class="home-page">
 
-    <div class="hero-container">
+        <!-- =====================================
+             APRESENTAÇÃO PRINCIPAL
+        ====================================== -->
 
-        <!-- FOTO DO EROS -->
-        <div class="hero-foto">
-            <img 
-                src="bb08864b-aa06-4c6f-b9bd-63c6c521de11.png" alt="Foto de animação de Eros, estudante de Informática"
-            >
-        </div>
+        <section class="hero" aria-labelledby="titulo-principal">
 
-        <!-- APRESENTAÇÃO -->
-        <div class="hero-conteudo">
+            <div class="hero-container">
 
-            <span class="hero-destaque">
-                OLÁ, SEJA BEM-VINDO AO MEU PORTFÓLIO
-            </span>
+                <!-- SUA FOTO -->
+                <div class="hero-foto">
 
-            <h1>
-                Eu sou <span>Eros.</span>
-            </h1>
+                    <img
+                        src="bb08864b-aa06-4c6f-b9bd-63c6c521de11.png"
+                        alt="Ilustração de Eros, estudante de Informática">
 
-            <h2>Estudante de tecnologia e desenvolvimento web</h2>
+                </div>
 
-            <p>
-                Tenho 16 anos e estudo no EMTI, onde desenvolvo meus
-                conhecimentos na área de informática. Gosto de aprender,
-                criar projetos e explorar novas possibilidades utilizando
-                a tecnologia e a inteligência artificial.
-            </p>
 
-            <!-- HABILIDADES -->
-            <div class="hero-habilidades">
+                <!-- APRESENTAÇÃO -->
+                <div class="hero-conteudo">
 
-                <span>HTML / CSS / JS</span>
-                <span>Banco de dados</span>
-                <span>Inteligência Artificial</span>
+                    <span class="hero-destaque">
+                        OLÁ, SEJA BEM-VINDO AO MEU PORTFÓLIO
+                    </span>
+
+                    <h1>
+                        Eu sou <span>Eros.</span>
+                    </h1>
+
+                    <h2>
+                        Estudante de tecnologia e desenvolvimento web
+                    </h2>
+
+                    <p>
+                        Tenho 16 anos e estudo no EMTI, onde desenvolvo
+                        meus conhecimentos na área de Informática.
+                        Gosto de aprender, criar projetos e explorar
+                        novas possibilidades utilizando a tecnologia
+                        e a inteligência artificial.
+                    </p>
+
+
+                    <!-- HABILIDADES -->
+                    <div class="hero-habilidades">
+
+                        <span>HTML / CSS / JS</span>
+
+                        <span>Banco de dados</span>
+
+                        <span>Inteligência Artificial</span>
+
+                    </div>
+
+
+                    <!-- BOTÕES -->
+                    <div class="home-hero-acoes">
+
+                        <a href="portifolio.html" class="hero-botao">
+                            Conheça meus projetos
+                            <span>→</span>
+                        </a>
+
+                        <a href="quemsoueu.html"
+                           class="home-link-secundario">
+
+                            Conheça minha trajetória
+
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <!-- BOTÃO PARA O PORTFÓLIO -->
-            <a href="portifolio.html" class="hero-botao">
-                Conheça meus projetos
-                <span>→</span>
-            </a>
+        </section>
 
-        </div>
 
-    </div>
 
-</section>
+        <!-- =====================================
+             INTELIGÊNCIA ARTIFICIAL
+        ====================================== -->
 
-</head>
-<body>
+        <section class="home-section home-ia">
+
+            <div class="home-container">
+
+                <div class="home-section-heading">
+
+                    <span class="home-kicker">
+                        TECNOLOGIA EM FOCO / 01
+                    </span>
+
+                    <h2>
+                        Inteligência Artificial e suas
+                        <span>possibilidades</span>
+                    </h2>
+
+                    <p>
+                        A inteligência artificial está presente em
+                        diversas ferramentas do nosso cotidiano.
+                        Conhecer seus conceitos ajuda a entender
+                        como ela pode apoiar os estudos, a criatividade
+                        e o desenvolvimento de novas soluções.
+                    </p>
+
+                </div>
+
+
+                <div class="ia-grid">
+
+
+                    <!-- CARD 01 -->
+                    <article class="ia-card">
+
+                        <div class="ia-card-topo">
+
+                            <span class="ia-numero">01</span>
+
+                            <span class="ia-icone">
+                                <i data-lucide="brain-circuit"></i>
+                            </span>
+
+                        </div>
+
+                        <span class="ia-etiqueta">CONCEITO</span>
+
+                        <h3>O que é IA?</h3>
+
+                        <p>
+                            É uma área da tecnologia que desenvolve
+                            sistemas capazes de realizar tarefas como
+                            reconhecer padrões, compreender linguagem,
+                            apoiar decisões e resolver problemas.
+                        </p>
+
+                        <a href="https://www.ibm.com/br-pt/think/topics/artificial-intelligence"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Entenda o conceito ↗
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- CARD 02 -->
+                    <article class="ia-card">
+
+                        <div class="ia-card-topo">
+
+                            <span class="ia-numero">02</span>
+
+                            <span class="ia-icone">
+                                <i data-lucide="network"></i>
+                            </span>
+
+                        </div>
+
+                        <span class="ia-etiqueta">APRENDIZADO</span>
+
+                        <h3>Aprendizado de máquina</h3>
+
+                        <p>
+                            É uma parte da IA em que modelos identificam
+                            padrões em dados e usam o que aprenderam
+                            para fazer previsões ou apoiar classificações
+                            e decisões.
+                        </p>
+
+                        <a href="https://www.ibm.com/br-pt/think/topics/machine-learning"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Saiba mais ↗
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- CARD 03 -->
+                    <article class="ia-card">
+
+                        <div class="ia-card-topo">
+
+                            <span class="ia-numero">03</span>
+
+                            <span class="ia-icone">
+                                <i data-lucide="sparkles"></i>
+                            </span>
+
+                        </div>
+
+                        <span class="ia-etiqueta">CRIAÇÃO</span>
+
+                        <h3>IA generativa</h3>
+
+                        <p>
+                            Pode produzir conteúdos como textos,
+                            imagens, áudio e códigos a partir
+                            de instruções. É importante revisar
+                            os resultados e conferir as informações.
+                        </p>
+
+                        <a href="https://www.ibm.com/br-pt/think/topics/generative-ai"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Explore o tema ↗
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+
+                <!-- REFLEXÃO SOBRE IA -->
+                <div class="home-aviso-ia">
+
+                    <span class="home-aviso-icone">
+                        <i data-lucide="lightbulb"></i>
+                    </span>
+
+                    <p>
+                        <strong>Minha visão:</strong>
+                        a IA é uma ferramenta de apoio. O mais importante
+                        é compreender o que estamos criando, testar
+                        as soluções e desenvolver nosso próprio raciocínio.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             REFERÊNCIAS DA PROGRAMAÇÃO
+        ====================================== -->
+
+        <section class="home-section home-referencias">
+
+            <div class="home-container">
+
+                <div class="home-section-heading home-heading-centralizado">
+
+                    <span class="home-kicker">
+                        PESSOAS QUE FIZERAM HISTÓRIA / 02
+                    </span>
+
+                    <h2>
+                        Programadores que são
+                        <span>referências</span>
+                    </h2>
+
+                    <p>
+                        A tecnologia que usamos hoje foi construída
+                        com ideias, pesquisas e contribuições de
+                        muitas pessoas. Estas são algumas referências
+                        importantes na história da computação.
+                    </p>
+
+                </div>
+
+
+                <div class="pioneiros-grid">
+
+
+                    <!-- ADA LOVELACE -->
+                    <article class="pioneiro-card">
+
+                        <div class="pioneiro-topo">
+
+                            <span class="pioneiro-iniciais">AL</span>
+
+                            <span class="pioneiro-numero">
+                                01 / PIONEIRA
+                            </span>
+
+                        </div>
+
+                        <h3>Ada Lovelace</h3>
+
+                        <span class="pioneiro-area">
+                            Primeiro programa publicado
+                        </span>
+
+                        <p>
+                            Matemática do século XIX, Ada escreveu
+                            um algoritmo para a Máquina Analítica
+                            de Charles Babbage, contribuição reconhecida
+                            como o primeiro programa de computador publicado.
+                        </p>
+
+                        <a href="https://www.unesco.org/en/virtual-science-museum/women-science/ada-lovelace"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Conheça sua história ↗
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- GRACE HOPPER -->
+                    <article class="pioneiro-card">
+
+                        <div class="pioneiro-topo">
+
+                            <span class="pioneiro-iniciais">GH</span>
+
+                            <span class="pioneiro-numero">
+                                02 / PIONEIRA
+                            </span>
+
+                        </div>
+
+                        <h3>Grace Hopper</h3>
+
+                        <span class="pioneiro-area">
+                            Compiladores e COBOL
+                        </span>
+
+                        <p>
+                            Cientista da computação e oficial da Marinha
+                            dos Estados Unidos, desenvolveu um dos primeiros
+                            compiladores e teve papel importante na criação
+                            e padronização do COBOL.
+                        </p>
+
+                        <a href="https://computerhistory.org/profile/grace-murray-hopper/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Conheça sua história ↗
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- TIM BERNERS-LEE -->
+                    <article class="pioneiro-card">
+
+                        <div class="pioneiro-topo">
+
+                            <span class="pioneiro-iniciais">TB</span>
+
+                            <span class="pioneiro-numero">
+                                03 / WEB
+                            </span>
+
+                        </div>
+
+                        <h3>Tim Berners-Lee</h3>
+
+                        <span class="pioneiro-area">
+                            Criador da World Wide Web
+                        </span>
+
+                        <p>
+                            Cientista britânico que inventou a
+                            World Wide Web em 1989, enquanto trabalhava
+                            no CERN. Sua criação transformou a forma
+                            como acessamos e compartilhamos informações.
+                        </p>
+
+                        <a href="https://home.cern/science/computing/the-birth-of-the-web"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Conheça sua história ↗
+
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- LINUS TORVALDS -->
+                    <article class="pioneiro-card">
+
+                        <div class="pioneiro-topo">
+
+                            <span class="pioneiro-iniciais">LT</span>
+
+                            <span class="pioneiro-numero">
+                                04 / SOFTWARE LIVRE
+                            </span>
+
+                        </div>
+
+                        <h3>Linus Torvalds</h3>
+
+                        <span class="pioneiro-area">
+                            Criador do kernel Linux e Git
+                        </span>
+
+                        <p>
+                            Programador finlandês que iniciou
+                            o desenvolvimento do kernel Linux
+                            em 1991 e criou o Git, ferramenta
+                            amplamente utilizada para controle
+                            de versão de projetos.
+                        </p>
+
+                        <a href="https://www.linuxfoundation.org/about/leadership"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Conheça sua história ↗
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             MINHA EVOLUÇÃO
+        ====================================== -->
+
+        <section class="home-section home-jornada">
+
+            <div class="home-container">
+
+                <div class="home-jornada-painel">
+
+
+                    <div class="home-jornada-texto">
+
+                        <span class="home-kicker">
+                            MINHA EVOLUÇÃO / 03
+                        </span>
+
+                        <h2>
+                            Aprender, praticar e
+                            <span>evoluir.</span>
+                        </h2>
+
+                        <p>
+                            Cada projeto é uma oportunidade de transformar
+                            conhecimento em prática. Tenho estudado
+                            desenvolvimento web, estruturação de páginas,
+                            programação JavaScript e integração com
+                            banco de dados usando Supabase.
+                        </p>
+
+                        <a href="portifolio.html" class="home-botao-contorno">
+                            Veja meu portfólio →
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="home-jornada-itens">
+
+
+                        <div class="jornada-item">
+
+                            <span class="jornada-item-numero">01</span>
+
+                            <div>
+                                <h3>Desenvolvimento web</h3>
+                                <p>HTML, CSS e JavaScript</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="jornada-item">
+
+                            <span class="jornada-item-numero">02</span>
+
+                            <div>
+                                <h3>Banco de dados</h3>
+                                <p>Supabase, tabelas e operações CRUD</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="jornada-item">
+
+                            <span class="jornada-item-numero">03</span>
+
+                            <div>
+                                <h3>Novas tecnologias</h3>
+                                <p>Inteligência artificial e inovação</p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             CHAMADA PARA CONTATO
+        ====================================== -->
+
+        <section class="home-cta">
+
+            <div class="home-container home-cta-conteudo">
+
+                <div>
+
+                    <span class="home-kicker">
+                        VAMOS CONVERSAR?
+                    </span>
+
+                    <h2>
+                        Toda boa ideia começa com uma conversa.
+                    </h2>
+
+                    <p>
+                        Entre em contato para compartilhar sugestões,
+                        dúvidas ou ideias de projetos.
+                    </p>
+
+                </div>
+
+                <a href="contato.html" class="home-cta-botao">
+                    Fale comigo →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================
+         RODAPÉ
+    ====================================== -->
+
+    <footer class="home-rodape">
+
+        <p>
+            © 2026 <strong>Eros.dev</strong> —
+            Eros Pereira. Todos os direitos reservados.
+        </p>
+
+        <p>
+            Desenvolvido com dedicação, curiosidade e tecnologia.
+        </p>
+
+    </footer>
+
+
+
+    <!-- BIBLIOTECA DE ÍCONES -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    </script>
+
+</body>
+</html>
